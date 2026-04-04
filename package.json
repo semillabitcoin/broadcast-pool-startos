@@ -1,16 +1,15 @@
 {
   "name": "broadcast-pool-startos",
-  "version": "0.2.2.0",
-  "description": "StartOS wrapper for Broadcast Pool — Electrum proxy with scheduled transaction broadcast",
-  "main": "startos/index.ts",
   "scripts": {
-    "build": "start-cli js-pack startos/index.ts",
+    "build": "rm -rf ./javascript && ncc build startos/index.ts -o ./javascript",
     "check": "tsc --noEmit"
   },
   "dependencies": {
     "@start9labs/start-sdk": "1.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.0"
+    "@types/node": "^22.19.0",
+    "@vercel/ncc": "^0.38.4",
+    "typescript": "^5.9.3"
   }
 }
