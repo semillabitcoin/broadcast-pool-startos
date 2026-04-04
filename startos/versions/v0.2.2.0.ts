@@ -1,21 +1,13 @@
 import { VersionInfo } from '@start9labs/start-sdk'
 
-export const v0_2_2_0 = VersionInfo.of({
-  version: '0.2.2.0:0',
-  releaseNotes: `v0.2.2 — Settings tab redesign, wallet connection info, Start9 support.
-
-- Redesigned Settings tab: auto-discovered servers as clickable cards, collapsible manual connection, inline preference saves
-- New "How to connect your wallet" section with copyable address
-- Independent npub save (no global Save button)
-- Electrum proxy port exposed via API for dynamic connection info
-- i18n improvements (ES/EN)`,
+export const v_0_2_2_0 = VersionInfo.of({
+  version: '0.2.2:0',
+  releaseNotes: {
+    en_US: 'Initial Start9 release. Settings tab redesign, wallet connection info, Start9 SSL support.',
+    es_ES: 'Primera versión para Start9. Rediseño de ajustes, info de conexión de wallet, soporte SSL Start9.',
+  },
   migrations: {
-    up: async ({ effects }) => {
-      // No migration needed for first Start9 release
-    },
-    down: async ({ effects }) => {
-      // Cannot downgrade from first Start9 release
-      throw new Error('Cannot downgrade: this is the first Start9 release')
-    },
+    up: async ({ effects }) => {},
+    down: async ({ effects }) => {},
   },
 })

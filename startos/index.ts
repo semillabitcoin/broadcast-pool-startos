@@ -1,8 +1,11 @@
-export { manifest } from './manifest'
+/**
+ * Plumbing. DO NOT EDIT.
+ */
+export { createBackup } from './backups'
 export { main } from './main'
-export { setInterfaces } from './interfaces'
-export { setDependencies } from './dependencies'
-export { setBackups } from './backups'
-export { setupInit } from './init'
-export { versions } from './versions'
-export { getCredentials } from './actions/getCredentials'
+export { init, uninit } from './init'
+export { actions } from './actions'
+import { buildManifest } from '@start9labs/start-sdk'
+import { manifest as sdkManifest } from './manifest'
+import { versionGraph } from './versions'
+export const manifest = buildManifest(versionGraph, sdkManifest)
