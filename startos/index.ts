@@ -1,0 +1,8 @@
+export { manifest } from './manifest'
+export { main } from './main'
+export { setInterfaces } from './interfaces'
+export { setDependencies } from './dependencies'
+export { setBackups } from './backups'
+export { setupInit } from './init'
+export { versions } from './versions'
+export { getCredentials } from './actions/getCredentials'
