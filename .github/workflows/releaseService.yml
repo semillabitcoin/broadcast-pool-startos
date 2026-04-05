@@ -8,9 +8,6 @@ on:
 jobs:
   release:
     uses: start9labs/shared-workflows/.github/workflows/releaseService.yml@master
-    with:
-      REGISTRY: ""
-      S3_S9PKS_BASE_URL: ""
     secrets:
       DEV_KEY: ${{ secrets.DEV_KEY }}
     permissions:
