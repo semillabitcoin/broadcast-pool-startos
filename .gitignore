@@ -4,3 +4,4 @@ javascript/
 *.s9pk
 .DS_Store
 package-lock.json
+broadcast-pool-logs.html
