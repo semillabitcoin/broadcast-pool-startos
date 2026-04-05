@@ -15,7 +15,7 @@ export const manifest = setupManifest({
   images: {
     'broadcast-pool': {
       source: {
-        dockerTag: 'ghcr.io/semillabitcoin/broadcast-pool:v0.3.8',
+        dockerTag: 'ghcr.io/semillabitcoin/broadcast-pool:v0.3.9',
       },
       arch: ['x86_64', 'aarch64'],
     },
